@@ -1,0 +1,49 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Base styles */
+@layer base {
+  :root {
+    --background: #ffffff;
+    --background-secondary: #f9fafb;
+    --text: #171717;
+    --text-secondary: #6b7280;
+    --border: #e5e7eb;
+    --primary: #2563eb;
+  }
+
+  .dark {
+    --background: #0A0A0A;
+    --background-secondary: #18181b;
+    --text: #ffffff;
+    --text-secondary: #a1a1aa;
+    --border: #27272a;
+    --primary: #3b82f6;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  * {
+    transition-property: color, background-color, border-color;
+    transition-duration: 200ms;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .app-border {
+    border: 1px solid var(--border);
+  }
+
+  .app-bg-secondary {
+    background-color: var(--background-secondary);
+  }
+
+  .app-text-secondary {
+    color: var(--text-secondary);
+  }
+}
